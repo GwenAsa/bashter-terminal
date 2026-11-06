@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-label="BashTer - a modern Linux terminal">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#14152e"/>
+      <stop offset="1" stop-color="#0a0b18"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffc857" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#ffc857" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="320" rx="28" fill="url(#bg)"/>
+  <rect x="1" y="1" width="1198" height="318" rx="27" fill="none" stroke="#2a2d55" stroke-width="2"/>
+  <rect width="1200" height="320" rx="28" fill="url(#glow)"/>
+
+  <!-- window dots -->
+  <circle cx="56" cy="52" r="7" fill="#ff6b81"/>
+  <circle cx="82" cy="52" r="7" fill="#ffc857"/>
+  <circle cx="108" cy="52" r="7" fill="#7bd88f"/>
+
+  <!-- prompt chevron -->
+  <path d="M96 150 L168 196 L96 242" fill="none" stroke="#e4e6f7" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- wordmark -->
+  <text x="212" y="226" font-family="'JetBrains Mono','Fira Code','DejaVu Sans Mono',monospace" font-size="116" font-weight="700" fill="#e4e6f7" letter-spacing="-2">BashTer</text>
+
+  <!-- cursor block -->
+  <rect x="856" y="130" width="62" height="112" rx="8" fill="#ffc857"/>
+
+  <text x="214" y="282" font-family="'IBM Plex Sans',system-ui,sans-serif" font-size="26" fill="#8386b0">A modern Linux terminal. Fast, small, and a pleasure to look at.</text>
+</svg>

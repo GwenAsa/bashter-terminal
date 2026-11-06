@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+/* Colours come from CSS variables set by applyChrome() in lib/themes.ts. */
+@theme inline {
+  --color-chrome: var(--bt-chrome);
+  --color-surface: var(--bt-surface);
+  --color-term: var(--bt-term);
+  --color-border: var(--bt-border);
+  --color-fg: var(--bt-fg);
+  --color-muted: var(--bt-muted);
+  --color-accent: var(--bt-accent);
+  --color-accent-fg: var(--bt-accent-fg);
+  --font-sans: "IBM Plex Sans", system-ui, sans-serif;
+}
+
+:root {
+  /* Sensible values before the first applyChrome() call (avoids a white flash). */
+  --bt-chrome: #0a0b18;
+  --bt-surface: #191b38;
+  --bt-term: #0f1022;
+  --bt-border: #2a2d55;
+  --bt-fg: #e4e6f7;
+  --bt-muted: #8386b0;
+  --bt-accent: #ffc857;
+  --bt-accent-fg: #1a1405;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  font-family: var(--font-sans);
+  background: var(--bt-chrome);
+}
+
+/* xterm paints its own background; keep its viewport transparent so rounded areas stay clean. */
+.xterm .xterm-viewport {
+  background-color: transparent !important;
+}
+
+:focus-visible {
+  outline: 2px solid var(--bt-accent);
+  outline-offset: 1px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
